@@ -11,24 +11,29 @@ import {Message} from './message';
 
 export function Screen(sources) {
 
-    // const videoSampler$ = xs.periodic(VIDEO_SAMPLE_RATE);
-    const rawVideo$ = sources.VIDEO.startWith(0);
-    // const videoUpstream$ = sources.WEBSOCKET;
+    const ville$ = sources.VIDEO
+      .startWith({active: false});
+
+
     const mascot$ = Mascot(sources).DOM;
     const message$ = Message(sources).DOM;
 
-    // const godStream$ = xs.combine(rawVideo$, mascot$)
-    // .startWith(0)
-    // .map(i => i)
 
     // const sampledVideoStream$ = videoSampler$.compose(sampleCombine(rawVideo$))
-    const vtree$ = xs.combine(message$, mascot$, rawVideo$ )
-      .map(([a,b,c ]) =>
-        div('.screen',[
-            a,
-            b
-            // div("Yo!"),
-        ])
+    const vtree$ = xs.combine(message$, mascot$, ville$ )
+      .map(([a,b,c ]) => {
+          var blaa = c ? c.active : "kissa"
+          console.info(c);
+        return (
+          div('.screen',[
+              a,
+              b,
+              blaa,
+          ])
+        )
+
+      }
+
       );
 
     const sinks = {
