@@ -36,7 +36,8 @@ var config = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new ProgressBarPlugin()
+    new ProgressBarPlugin(),
+
   ]
 }
 

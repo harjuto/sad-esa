@@ -1,13 +1,15 @@
 import {div} from '@cycle/dom'
 import xs from 'xstream'
 import './style/style.less'
-import {Mascot} from './mascot'
+import {Screen} from './screen';
 
 export function App (sources) {
-  const mascot$ = Mascot().DOM;
+
+  const screen$ = Screen(sources).DOM;
 
   const sinks = {
-    DOM: mascot$
+    DOM: screen$
   }
+
   return sinks
 }
