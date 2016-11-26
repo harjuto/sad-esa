@@ -36,11 +36,6 @@ var config = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new ProgressBarPlugin(),
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery"
-    })
   ]
 }
 

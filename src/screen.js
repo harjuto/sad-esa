@@ -5,7 +5,6 @@ import {div} from '@cycle/dom'
 import xs from 'xstream'
 import sampleCombine from 'xstream/extra/sampleCombine'
 
-const VIDEO_SAMPLE_RATE = 500;
 
 export function Screen(sources) {
 
@@ -16,14 +15,12 @@ export function Screen(sources) {
     const godStream$ = xs.merge(rawVideo$, videoUpstream$).map(i => i)
 
     // const sampledVideoStream$ = videoSampler$.compose(sampleCombine(rawVideo$))
-    const vtree$ = godStream$.map( a => {
-        return (
+    const vtree$ = xs.of(
           div('.screen',[
-              div(a[0]),
               div("Yo!"),
           ])
-        );
-    });
+    );
+
 
     const sinks = {
         DOM: vtree$
