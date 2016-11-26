@@ -2,7 +2,6 @@
  * Created by thar on 25/11/16.
  */
 import xs from 'xstream';
-import 'signalr-amd';
 
 export function makeWebsocketDriver() {
 

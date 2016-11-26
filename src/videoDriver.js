@@ -34,7 +34,7 @@ export function makeVideoDriver() {
                         video.play();
                     });
                 } else {
-                    alert("ERROR PUERTO RICO")
+                    // alert("ERROR PUERTO RICO")
                 }
 
 
