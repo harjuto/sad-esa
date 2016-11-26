@@ -8,7 +8,7 @@ const main = App;
 const drivers = {
   DOM: makeDOMDriver('#app'),
   VIDEO: makeVideoUploadDriver(),
-  state: 
+  state:
 }
 
 run(main, drivers)
