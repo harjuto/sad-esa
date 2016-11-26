@@ -5,7 +5,7 @@ import delay from 'xstream/extra/delay'
 
 export function Mascot (sources) {
   const vtree$ = xs.of(
-    div('.mascot')
+    div('.mascot--small')
   )
   const sinks = {
     DOM: vtree$
