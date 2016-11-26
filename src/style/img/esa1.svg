@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600px" height="800px" viewBox="0 0 560 426" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>esa</title>
+    <style>
+    svg {
+      margin: auto;
+      background: none;
+  }
+
+
+
+     #wink{
+      animation-name: eye-wink;
+      animation-duration: 0.5s;
+      animation-iteration-count: 1;
+      transform-origin: 50%;
+    }
+
+    @-webkit-keyframes eye-wink {
+      0% { -webkit-transform: scaleX(1) scaleY(1); }
+      1% { -webkit-transform: scaleX(1) scaleY(1); }
+      2% { -webkit-transform: scaleX(1) scaleY(1); }
+      30% { -webkit-transform: scaleX(1) scaleY(0.02); }
+      60% { -webkit-transform: scaleX(1) scaleY(0.001); }
+      61% { -webkit-transform: scaleX(1.1) scaleY(0.02);}
+      62% { -webkit-transform: scaleX(1) scaleY(0,5); }
+      100% { -webkit-transform: scaleX(1) scaleY(1); }
+    }
+
+    #right {
+      -webkit-animation: wave 1s ease-in 2;
+    }
+
+    @-webkit-keyframes wave {
+        <!-- 0% {-webkit-transform: rotate(364deg);}
+      50% {-webkit-transform: rotate(366deg); }
+      100% {-webkit-transform: rotate(364deg); -->
+      0% {-webkit-transform: rotate(-35deg);}
+    50% {-webkit-transform: rotate(-37deg); }
+    100% {-webkit-transform: rotate(-36deg);
+
+    }
+  </style>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M-1.95943488e-15,74 C-3.04160088e-15,91.673112 14.3203044,106 31.9999655,106 L64.0000345,106 C81.6731274,106 96,91.6769978 96,74 C96,56.326888 81.6796956,42 64.0000345,42 L64,0 L0,0 L0,74 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="96" height="106" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M14.5,32 L49.5,32" id="path-3"></path>
+        <path d="M-1.95943488e-15,74 C-3.04160088e-15,91.673112 14.3203044,106 31.9999655,106 L64.0000345,106 C81.6731274,106 96,91.6769978 96,74 C96,56.326888 81.6796956,42 64.0000345,42 L64,0 L0,0 L0,74 Z" id="path-4"></path>
+        <mask id="mask-5" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="96" height="106" fill="white">
+            <use xlink:href="#path-4"></use>
+        </mask>
+        <path d="M14.5,32 L49.5,32" id="path-6"></path>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-324.000000, -461.000000)">
+            <g id="esa" transform="translate(324.000000, 461.000000)">
+                <path d="M147.635684,220.014876 C156.896695,209.398883 153.588533,197.13809 140.314948,192.433959 C140.314948,192.433959 99.1229315,179.521765 83.7488919,166.621414 C69.3766252,154.56165 44.9718845,120.876437 44.9718845,120.876437 C36.4964158,109.630835 21.9716171,108.98289 12.5259955,119.433463 L10.7894598,121.354755 C1.34555879,131.803424 -2.74105988,151.113714 1.95338431,164.397831 C1.95338431,164.397831 4.91349357,175.991334 12.9013908,189.679452 C17.5084018,197.574059 27.1093967,206.07523 32.7535794,210.811262 C48.5960021,224.104633 92.1533391,245.912255 92.1533391,245.912255 C104.645379,252.415075 122.283259,249.076623 131.540721,238.464698 L147.635684,220.014876 Z" id="left" fill="#0177CC"></path>
+                <path d="M554.635684,216.014876 C563.896695,205.398883 560.588533,193.13809 547.314948,188.433959 C547.314948,188.433959 506.122932,175.521765 490.748892,162.621414 C476.376625,150.56165 451.971884,116.876437 451.971884,116.876437 C443.496416,105.630835 428.971617,104.98289 419.525995,115.433463 L417.78946,117.354755 C408.345559,127.803424 404.25894,147.113714 408.953384,160.397831 C408.953384,160.397831 411.913494,171.991334 419.901391,185.679452 C424.508402,193.574059 434.109397,202.07523 439.753579,206.811262 C455.596002,220.104633 499.153339,241.912255 499.153339,241.912255 C511.645379,248.415075 529.283259,245.076623 538.540721,234.464698 L554.635684,216.014876 Z" id="right" fill="#0177CC" transform="translate(483.445803, 176.617036) scale(-1, 1) translate(-483.445803, -176.617036) "></path>
+                <rect id="Rectangle" fill="#0177CC" x="100.256134" y="0.5" width="356.743866" height="327.5" rx="78"></rect>
+                <circle id="Oval" fill="#FF6319" cx="274" cy="213" r="32"></circle>
+                <ellipse id="wink" stroke="#FFFFFF" stroke-width="10" cx="174.5" cy="193.5" rx="33.5" ry="32.5"></ellipse>
+                <ellipse id="Oval" stroke="#FFFFFF" stroke-width="10" cx="373.5" cy="193.5" rx="33.5" ry="32.5"></ellipse>
+                <g id="Group" transform="translate(277.000000, 319.000000)">
+                    <use id="Combined-Shape" stroke="#0177CC" mask="url(#mask-2)" stroke-width="20" fill="#FFFFFF" xlink:href="#path-1"></use>
+                    <path d="M14.5,19 L49.5,19" id="Line" stroke="#F290CE" stroke-width="10" stroke-linecap="square"></path>
+                    <g id="Line" stroke-linecap="square">
+                        <use stroke="#00995D" stroke-width="10" xlink:href="#path-3"></use>
+                        <use stroke="#979797" stroke-width="1" xlink:href="#path-3"></use>
+                    </g>
+                </g>
+                <g id="Group" transform="translate(229.000000, 373.000000) scale(-1, 1) translate(-229.000000, -373.000000) translate(181.000000, 320.000000)">
+                    <use id="Combined-Shape" stroke="#0177CC" mask="url(#mask-5)" stroke-width="20" fill="#FFFFFF" xlink:href="#path-4"></use>
+                    <path d="M14.5,19 L49.5,19" id="Line" stroke="#F290CE" stroke-width="10" stroke-linecap="square"></path>
+                    <g id="Line" stroke-linecap="square">
+                        <use stroke="#00995D" stroke-width="10" xlink:href="#path-6"></use>
+                        <use stroke="#979797" stroke-width="1" xlink:href="#path-6"></use>
+                    </g>
+                </g>
+                <path d="M218,270 C218,270 244.751168,292.195312 271.502336,292.195312 C298.253505,292.195312 325.004673,270 325.004673,270" id="Line" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round" stroke-linejoin="bevel"></path>
+            </g>
+        </g>
+    </g>
+</svg>

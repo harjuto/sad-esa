@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Screen from './Screen';
 import './App.css';
 import Websocket from './websocket';
 
 
 class App extends Component {
-
-
     constructor() {
         super();
         this.state = {
@@ -25,6 +23,7 @@ class App extends Component {
                 <div className="animstate">
                   {this.state.animation}
                 </div>
+                <Screen />
           </div>
         );
     }
