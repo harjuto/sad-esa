@@ -20,7 +20,7 @@ export function makeVideoUploadDriver() {
             start: listener => {
 
                 villeProxy.client.broadcastMessage = function(name, message) {
-                    listener.next({active: true});
+                    listener.next("active");
                 };
                 $.connection.hub.start()
                   .done(function () {

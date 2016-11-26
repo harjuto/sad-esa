@@ -9,19 +9,27 @@ import {Message} from './message';
 import sampleCombine from 'xstream/extra/sampleCombine'
 
 
+function animation(sources) {
+    const animation$ = sources.VIDEO
+      .startWith("idle");
+
+    const sinks = {
+        anim: animation$
+    }
+
+    return sinks;
+}
+
+
 export function Screen(sources) {
 
-    const ville$ = sources.VIDEO
-      .startWith({active: false});
-
+    const anim$ = animation(sources).anim;
 
     const mascot$ = Mascot(sources).DOM;
     const message$ = Message(sources).DOM;
 
-    const god$ = ville$.compose(sampleCombine(mascot$, message$));
+    const god$ = anim$.compose(sampleCombine(mascot$, message$));
 
-
-    // const sampledVideoStream$ = videoSampler$.compose(sampleCombine(rawVideo$))
     const vtree$ = god$
       .map(([a,b,c]) => {
         return (

@@ -4,9 +4,12 @@ import './style/style.less'
 import delay from 'xstream/extra/delay'
 
 export function Mascot (sources) {
-  const vtree$ = xs.of(
-    div('.mascot')
-  )
+
+  const vtree$ = animate$
+    .map(animation =>
+      div('.mascot' + animation)
+    )
+
   const sinks = {
     DOM: vtree$
   }
