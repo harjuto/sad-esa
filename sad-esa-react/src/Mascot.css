@@ -1,0 +1,20 @@
+.mascot {
+  background-image: url('img/esa4.svg');
+  height: 800px;
+  background-repeat: no-repeat;
+  width: 900px;
+  margin: auto;
+  position: absolute;
+  top: 40%;
+}
+
+.mascot--small {
+  background-image: url('img/esa4.svg');
+  background-size: contain;
+  height: 400px;
+  background-repeat: no-repeat;
+  width: 550px;
+  margin: auto;
+  position: absolute;
+  top: 70%;
+}
