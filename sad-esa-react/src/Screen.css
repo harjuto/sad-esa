@@ -17,8 +17,8 @@ p {
   width: 1080px;
   margin: auto;
   border: 40px solid black;
-  /*// background-image: url('party.png');*/
-  background-image: url('img/niceday.png');
+background-image: url('./img/party.png');
+  /*background-image: url('./img/niceday.png');*/
   /*// background-image: url('img/beach.png');
   // background-image: url('img/car.png');
   // background-image: url('img/coffee.png');
@@ -28,7 +28,7 @@ p {
   background-repeat: no-repeat;
   display: block;
   margin: 0 auto;
-
+  position: relative;
 }
 
 .party {   background-image: url('img/party.png'); }

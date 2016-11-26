@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './Screen.css';
+import Message from './Message';
+import Mascot from './Mascot';
 
 class Screen extends Component {
   render() {
