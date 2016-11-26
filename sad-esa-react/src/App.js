@@ -18,7 +18,7 @@ class App extends Component {
 
     render() {
         return (
-          <div className={`screen ${animstate}`}>
+          <div className="screen">
             <Websocket updateAnimation={this.updateAnimation.bind(this)} />
                 <div className="animstate">
                   {this.state.animation}
