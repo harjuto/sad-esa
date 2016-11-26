@@ -1,13 +1,15 @@
 import {div} from '@cycle/dom'
 import xs from 'xstream'
 import './style/style.less'
+import {Screen} from './screen';
 
 export function App (sources) {
-  const vtree$ = xs.of(
-    div('.my-class','My Awesome Cycle.js app')
-  )
+
+  const screen$ = Screen(sources).DOM;
+
   const sinks = {
-    DOM: vtree$
+    DOM: screen$
   }
+
   return sinks
 }

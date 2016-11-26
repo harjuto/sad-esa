@@ -37,7 +37,11 @@ var compiler = webpack({
   },
   plugins: [
     new ProgressBarPlugin(),
-    new webpack.optimize.UglifyJsPlugin({minimize: true})
+    new webpack.optimize.UglifyJsPlugin({minimize: true}),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    })
   ]
 })
 
