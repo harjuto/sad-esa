@@ -117,7 +117,7 @@ module.exports = {
       {test: /\.svg/, loader: 'svg-url-loader'},
       { test: /\.css$/, loader: "style-loader!css-loader" },
       // { test: /\.png$/, loader: "url-loader?limit=100000" },
-      { test: /\.png$/, loader: "file-loader" }
+      { test: /\.png$/, loader: "file-loader" },
       // "postcss" loader applies autoprefixer to our CSS.
       // "css" loader resolves paths in CSS and adds assets as dependencies.
       // "style" loader turns CSS into JS modules that inject <style> tags.
