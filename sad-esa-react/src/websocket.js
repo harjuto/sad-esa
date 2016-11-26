@@ -9,8 +9,6 @@ const VIDEO_SAMPLE_RATE = 5000;
 
 export default class WebSocket extends React.Component {
 
-
-
     render() {
         var self = this;
         villeProxy.client.broadcastMessage = function(name, message) {
