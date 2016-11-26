@@ -7,6 +7,7 @@ export function Mascot (sources) {
   const vtree$ = xs.of(
     div('.mascot--small')
   )
+
   const sinks = {
     DOM: vtree$
   }

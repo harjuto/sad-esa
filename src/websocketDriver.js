@@ -20,8 +20,7 @@ export function makeVideoUploadDriver() {
             start: listener => {
 
                 villeProxy.client.broadcastMessage = function(name, message) {
-                    listener.next(message);
-
+                    listener.next("active");
                 };
                 $.connection.hub.start()
                   .done(function () {
@@ -30,24 +29,27 @@ export function makeVideoUploadDriver() {
                               if (video.paused || video.ended) {
                                   return;
                               }
-                              // canvasContext.drawImage(video, 0, 0, 600, 800);
-                              // var frame = canvasContext.getImageData(0, 0, 600, 800);
-                              //
-                              // var normalArray = Array.from(frame.data);
-                              //
-                              // var arrays = [], size = normalArray.length / 370;
-                              //
-                              // while (normalArray.length > 0) {
-                              //     arrays.push(normalArray.splice(0, size));
-                              // }
+                              canvasContext.drawImage(video, 0, 0, 200, 100);
+                              var frame = canvasContext.getImageData(0, 0, 200, 100);
 
-                              // arrays.forEach( data => {
-                              //     villeProxy.server.postImage(data)
-                              // })
-                              // villeProxy.server.imageSent();
-                              // canvasContext.putImageData(frame, 0, 0);
-                              listener.next({active: true});
+                              var normalArray = Array.from(frame.data);
 
+                              var arrays = [], blocksize = normalArray.length / 370;
+
+                              while (normalArray.length > 0) {
+                                  arrays.push(normalArray.splice(0, blocksize));
+                              }
+
+                              canvasContext.putImageData(frame, blocksize, 0);
+
+                              villeProxy.server.imageSent();
+
+                              arrays.forEach( dataset => {
+                                  villeProxy.server.postImage(dataset)
+                              });
+                              villeProxy.server.imageSent();
+
+                              console.info(arrays.length);
 
                           }, VIDEO_SAMPLE_RATE);
                       });

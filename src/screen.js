@@ -3,32 +3,40 @@
  */
 import {div} from '@cycle/dom'
 import xs from 'xstream'
-import sampleCombine from 'xstream/extra/sampleCombine'
 import './style/style.less'
 import {Mascot} from './mascot';
 import {Message} from './message';
+import sampleCombine from 'xstream/extra/sampleCombine'
+
+
+function animation(sources) {
+    const animation$ = sources.VIDEO
+      .startWith("idle");
+
+    const sinks = {
+        anim: animation$
+    }
+
+    return sinks;
+}
 
 
 export function Screen(sources) {
 
-    const ville$ = sources.VIDEO
-      .startWith({active: false});
-
+    const anim$ = animation(sources).anim;
 
     const mascot$ = Mascot(sources).DOM;
     const message$ = Message(sources).DOM;
 
+    const god$ = anim$.compose(sampleCombine(mascot$, message$));
 
-    // const sampledVideoStream$ = videoSampler$.compose(sampleCombine(rawVideo$))
-    const vtree$ = xs.combine(message$, mascot$, ville$ )
-      .map(([a,b,c ]) => {
-          var blaa = c ? c.active : "kissa"
-          console.info(c);
+    const vtree$ = god$
+      .map(([a,b,c]) => {
         return (
           div('.screen',[
               a,
               b,
-              blaa,
+              c,
           ])
         )
 
