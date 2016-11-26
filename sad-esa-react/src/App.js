@@ -8,12 +8,12 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            animation: 'idle'
+            animState: 'idle'
         }
     }
 
     updateAnimation(anim) {
-        this.setState({animation: anim})
+        this.setState({animState: anim})
     }
 
     render() {
@@ -23,7 +23,7 @@ class App extends Component {
                 <div className="animstate">
                   {this.state.animation}
                 </div>
-                <Screen />
+                <Screen animState={this.state.animState} />
           </div>
         );
     }

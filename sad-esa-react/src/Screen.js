@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import './Screen.css';
 import Message from './Message';
-import Mascot from './Mascot';
 
 class Screen extends Component {
   render() {
     return (
-      <div className="screen">
+      <div className={ `screen ${this.props.animState}`}>
         <Message />
-        <Mascot />
+        <div className={`mascot ${this.props.animState}`}></div>
       </div>
     );
   }
