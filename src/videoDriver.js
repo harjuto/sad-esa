@@ -5,9 +5,6 @@ import xs from 'xstream'
 
 const VIDEO_SAMPLE_RATE = 500;
 
-
-
-
 export function makeVideoDriver() {
     var video = document.getElementById('video');
     var canvasContext = document.getElementById('canvas').getContext("2d");
