@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="580px" height="426px" viewBox="0 0 580 426" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M-1.95943488e-15,74 C-3.04160088e-15,91.673112 14.3203044,106 31.9999655,106 L64.0000345,106 C81.6731274,106 96,91.6769978 96,74 C96,56.326888 81.6796956,42 64.0000345,42 L64,0 L0,0 L0,74 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="96" height="106" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M14.5,32 L49.5,32" id="path-3"></path>
+        <path d="M-1.95943488e-15,74 C-3.04160088e-15,91.673112 14.3203044,106 31.9999655,106 L64.0000345,106 C81.6731274,106 96,91.6769978 96,74 C96,56.326888 81.6796956,42 64.0000345,42 L64,0 L0,0 L0,74 Z" id="path-4"></path>
+        <mask id="mask-5" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="96" height="106" fill="white">
+            <use xlink:href="#path-4"></use>
+        </mask>
+        <path d="M14.5,32 L49.5,32" id="path-6"></path>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-327.000000, -430.000000)">
+            <g id="Group-2" transform="translate(303.000000, 430.000000)">
+                <rect id="Rectangle" fill="#007AC9" x="118" y="0.5" width="377" height="327.5" rx="78"></rect>
+                <path d="M445.286403,131.487852 C445.286403,117.399282 456.027141,109.834875 469.348684,114.411746 C469.348684,114.411746 511.051381,130.360021 532.260317,130.360021 C552.087277,130.360021 596.080298,119.958404 596.080298,119.958404 C609.832436,116.94872 621.424561,125.916017 621.972255,139.993149 L622.072946,142.581167 C622.620541,156.655735 613.212229,173.845042 600.928142,180.723646 C600.928142,180.723646 589.715946,188.212214 573.951277,193.563399 C564.859021,196.649689 551.311901,196.990564 543.525586,196.990564 C521.670503,196.990564 470.237972,185.423143 470.237972,185.423143 C456.457601,182.526693 445.286403,168.767721 445.286403,154.669043 L445.286403,131.487852 Z" id="Rectangle-3" fill="#0177CC" transform="translate(533.691044, 155.033999) rotate(320.000000) translate(-533.691044, -155.033999) "></path>
+                <path d="M6.28640286,168.419854 C6.28640286,154.331284 17.0271407,146.766877 30.3486839,151.343748 C30.3486839,151.343748 72.0513814,167.292023 93.2603166,167.292023 C113.087277,167.292023 157.080298,156.890406 157.080298,156.890406 C170.832436,153.880722 182.424561,162.848019 182.972255,176.925151 L183.072946,179.513169 C183.620541,193.587737 174.212229,210.777044 161.928142,217.655648 C161.928142,217.655648 150.715946,225.144216 134.951277,230.495401 C125.859021,233.581691 112.311901,233.922566 104.525586,233.922566 C82.6705029,233.922566 31.2379724,222.355145 31.2379724,222.355145 C17.457601,219.458695 6.28640286,205.699723 6.28640286,191.601046 L6.28640286,168.419854 Z" id="Rectangle-3" fill="#0177CC" transform="translate(94.691044, 191.966001) scale(-1, 1) rotate(320.000000) translate(-94.691044, -191.966001) "></path>
+                <circle id="Oval" fill="#FF6319" cx="302" cy="204" r="40"></circle>
+                <ellipse id="Oval" stroke="#FFFFFF" stroke-width="10" cx="203.5" cy="183.5" rx="33.5" ry="32.5"></ellipse>
+                <ellipse id="Oval" stroke="#FFFFFF" stroke-width="10" cx="405.5" cy="181.5" rx="33.5" ry="32.5"></ellipse>
+                <g id="Group" transform="translate(309.000000, 319.000000)">
+                    <use id="Combined-Shape" stroke="#0177CC" mask="url(#mask-2)" stroke-width="20" fill="#FFFFFF" xlink:href="#path-1"></use>
+                    <path d="M14.5,19 L49.5,19" id="Line" stroke="#F290CE" stroke-width="10" stroke-linecap="square"></path>
+                    <g id="Line" stroke-linecap="square">
+                        <use stroke="#00995D" stroke-width="10" xlink:href="#path-3"></use>
+                        <use stroke="#979797" stroke-width="1" xlink:href="#path-3"></use>
+                    </g>
+                </g>
+                <g id="Group" transform="translate(261.000000, 373.000000) scale(-1, 1) translate(-261.000000, -373.000000) translate(213.000000, 320.000000)">
+                    <use id="Combined-Shape" stroke="#0177CC" mask="url(#mask-5)" stroke-width="20" fill="#FFFFFF" xlink:href="#path-4"></use>
+                    <path d="M14.5,19 L49.5,19" id="Line" stroke="#F290CE" stroke-width="10" stroke-linecap="square"></path>
+                    <g id="Line" stroke-linecap="square">
+                        <use stroke="#00995D" stroke-width="10" xlink:href="#path-6"></use>
+                        <use stroke="#979797" stroke-width="1" xlink:href="#path-6"></use>
+                    </g>
+                </g>
+                <path d="M250,270 C250,270 276.751168,292.195312 303.502336,292.195312 C330.253505,292.195312 357.004673,270 357.004673,270" id="Line" stroke="#FFFFFF" stroke-width="15" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>

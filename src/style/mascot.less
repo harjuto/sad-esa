@@ -1,0 +1,61 @@
+.mascot {
+  background-image: url('esa.svg');
+  height: 600px;
+  background-repeat: no-repeat;
+}
+
+svg {
+  margin: auto;
+}
+
+#wink {
+  animation-name: blinkc;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  transform-origin: 50%;
+}
+
+#right {
+  -webkit-animation: wink 1s ease-in 2;
+}
+
+@-webkit-keyframes wink {
+    0% {-webkit-transform: rotate(364deg);}
+  50% {-webkit-transform: rotate(366deg); }
+  100% {-webkit-transform: rotate(364deg);
+
+}
+}
+
+// @keyframes blinkk {
+//   0%, 100% {
+//     opacity: 0;
+//   }
+//   30%, 95% {
+//     opacity: 1;
+//  }
+// }
+
+@-webkit-keyframes blinkc {
+  0% { -webkit-transform: scaleX(1) scaleY(1); }
+  1% { -webkit-transform: scaleX(1) scaleY(1); }
+  2% { -webkit-transform: scaleX(1) scaleY(1); }
+  30% { -webkit-transform: scaleX(1) scaleY(0.02); }
+  60% { -webkit-transform: scaleX(1) scaleY(0.001); }
+  61% { -webkit-transform: scaleX(1.1) scaleY(0.02);}
+  62% { -webkit-transform: scaleX(1) scaleY(0,5); }
+  100% { -webkit-transform: scaleX(1) scaleY(1); }
+}
+
+// @keyframes squeeze {
+//   90% {
+//     transform: none;
+//     animation-timing-function: ease-in;
+//   }
+//   93% {
+//     transform: translateY(3px) scaleY(0.8)
+//   }
+//   100% {
+//     animation-timing-function: ease-out;
+//   }
+// }
