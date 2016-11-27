@@ -78,9 +78,9 @@ background-image: url('img/spa.png');*/
   top: 70%;
 }
 
-.message {
-  width: 70%;
-  margin: 0 15%;
+.message.idle {
+  width: 80%;
+  margin: 0 10%;
   height: 200px;
   word-wrap: break-word;
   text-align: center;
@@ -89,6 +89,7 @@ background-image: url('img/spa.png');*/
 .message.active {
   display: none;
 }
+
 
 /*.screen.active #wink {
      animation-name: eye-wink;
