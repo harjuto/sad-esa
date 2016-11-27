@@ -8,12 +8,18 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            animation: 'idle'
+            animState: {
+              suggestion: 'car_commercial',
+              animation: 'idle'
         }
+    }
     }
 
     updateAnimation(anim) {
-        this.setState({animation: anim})
+        this.setState({animState: {
+          suggestion: 'spa_ad',
+          animation: 'active',
+        }})
     }
 
     render() {
@@ -23,7 +29,8 @@ class App extends Component {
                 <div className="animstate" style={{background: `url(${anger})`}}>
                   {this.state.animation}
                 </div>
-                <Screen />
+                <Screen animState={this.state.animState} />
+
           </div>
         );
     }
