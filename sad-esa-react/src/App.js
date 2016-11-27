@@ -16,7 +16,10 @@ class App extends Component {
     }
 
     updateAnimation(anim) {
-        this.setState({animState: anim})
+        this.setState({animState: {
+          suggestion: 'spa_ad',
+          animation: 'active',
+        }})
     }
 
     render() {
