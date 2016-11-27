@@ -23,7 +23,6 @@ export default class WebSocket extends React.Component {
                 if (video.paused || video.ended) {
                     return;
                 }
-                console.info("play9ing")
                 canvasContext.drawImage(video, 0, 0, 600, 800);
                 var canvas = document.getElementById('canvas');
                 var dataurl = canvas.toDataURL("image/png");
@@ -53,19 +52,51 @@ export default class WebSocket extends React.Component {
                 });
             }, VIDEO_SAMPLE_RATE);
         });
-
-        // setTimeout( () => {
-        //     // video.play();
-        // }, 2000)
-
-
     }
 
     render() {
-        return null
-
+        return <div id="button-container">
+            <button id="analyse" onClick={this.analyzePicture.bind(this)}>PIC</button>
+       </div>
     }
 
+
+    analyzePicture() {
+        var self = this;
+        self.props.reset();
+        console.clear();
+        console.info("RE ANALYZING...")
+        if (video.paused || video.ended) {
+            return;
+        }
+        canvasContext.drawImage(video, 0, 0, 600, 800);
+        var canvas = document.getElementById('canvas');
+        var dataurl = canvas.toDataURL("image/png");
+        var binary = atob(dataurl.split(',')[1]);
+
+        var array = [];
+        for(var i = 0; i < binary.length; i++) {
+            array.push(binary.charCodeAt(i));
+        }
+        var imageBlob = new Blob([new Uint8Array(array)], {type: 'image/png'});
+
+        var request = new Request("http://esabustopv2.azurewebsites.net/api/busstop", {
+            method: "POST",
+            body: imageBlob,
+            headers: new Headers({
+                "Content-Type": "application/octet-stream",
+            })
+        });
+        fetch(request)
+          .then(function(response) {
+              return response.json();
+          }).then(function(json) {
+            self.props.updateAnimation(json)
+            console.info(json)
+        }).catch(function(err) {
+            console.info('Image analyzing service is at capacity');
+        });
+    }
 
 
 

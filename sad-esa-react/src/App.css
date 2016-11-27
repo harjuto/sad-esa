@@ -4,6 +4,26 @@
 @import 'Screen.css';
 @import 'Message.css';
 
+#canvas {
+    position: absolute;
+    top: 20px;
+    display: none;
+}
+
+#button-container {
+    position: absolute;
+    left:0;
+    right: 0;
+    bottom: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#analyse {
+height: 100px;
+    width: 250px;
+}
 /*
 .App {
   text-align: center;

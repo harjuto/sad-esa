@@ -11,17 +11,24 @@ class App extends Component {
     }
 
     updateAnimation(anim) {
-        console.info(anim)
         this.setState({animState: {
           suggestion: anim.Message,
           animation: 'active',
         }})
     }
 
+    resetAnimation() {
+        console.info("reset")
+        this.setState({animState: {
+            suggestion: 'none',
+            animation:'idle'
+        }})
+    }
+
     render() {
         return (
           <div>
-            <Websocket updateAnimation={this.updateAnimation.bind(this)} />
+            <Websocket reset={this.resetAnimation.bind(this)} updateAnimation={this.updateAnimation.bind(this)} />
 
                 <Screen animState={this.state.animState} />
 
