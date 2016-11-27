@@ -8,8 +8,11 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            animState: 'idle'
+            animState: {
+              suggestion: 'car_commercial',
+              animation: 'idle'
         }
+    }
     }
 
     updateAnimation(anim) {
@@ -18,11 +21,8 @@ class App extends Component {
 
     render() {
         return (
-          <div className="screen">
+          <div>
             <Websocket updateAnimation={this.updateAnimation.bind(this)} />
-                <div className="animstate">
-                  {this.state.animation}
-                </div>
                 <Screen animState={this.state.animState} />
           </div>
         );
