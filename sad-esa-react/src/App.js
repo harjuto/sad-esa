@@ -7,17 +7,12 @@ import Websocket from './websocket';
 class App extends Component {
     constructor() {
         super();
-        this.state = {
-            animState: {
-              suggestion: 'car_commercial',
-              animation: 'idle'
-        }
-    }
+        this.state = {}
     }
 
     updateAnimation(anim) {
         this.setState({animState: {
-          suggestion: 'spa_ad',
+          suggestion: 'womens_winter_cloth_ad',
           animation: 'active',
         }})
     }
