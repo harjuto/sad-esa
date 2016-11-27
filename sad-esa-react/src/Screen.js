@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 import './Screen.css';
 
 class Screen extends Component {
+  static get defaultProps () {
+    return {
+      animState: {
+        animation: 'idle',
+        suggestion: 'none',
+      }
+    }
+  }
   render() {
-    console.log(this.props)
     return (
       <div className={ `screen ${this.props.animState.animation}`} style={ { background: `url(img/${ this.props.animState.suggestion }.png)`}}>
-        <p className={ `message ${this.props.animState.animation}`} ></p>
+        <p className={ `message ${this.props.animState.animation}`} >PPSSTT!!</p>
         <div className={ `mascot ${this.props.animState.animation}`}></div>
       </div>
     );
