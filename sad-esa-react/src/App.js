@@ -13,12 +13,13 @@ class App extends Component {
     }
 
     updateAnimation(anim) {
+        debugger;
         this.setState({animation: anim})
     }
 
     render() {
         return (
-          <div className="screen">
+          <div>
             <Websocket updateAnimation={this.updateAnimation.bind(this)} />
                 <div className="animstate">
                   {this.state.animation}
