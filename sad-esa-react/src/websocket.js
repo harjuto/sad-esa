@@ -42,22 +42,25 @@ export default class WebSocket extends React.Component {
                     array.push(binary.charCodeAt(i));
                 }
                 var imageBlob = new Blob([new Uint8Array(array)], {type: 'image/png'});
-                var myHeaders = new Headers();
-                myHeaders.append("Accept", "application/octet-stream");
-                myHeaders.append("Content-Type", "application/octet-stream");
-                myHeaders.append("X-perseenre", "kikkare");
 
-                fetch("http://esabustopv2.azurewebsites.net/api/busstop", {
+
+                var request = new Request("http://esabustopv2.azurewebsites.net/api/busstop", {
                     method: "POST",
                     body: imageBlob,
                     headers: new Headers({
                         "Content-Type": "application/octet-stream",
-                    }),
-                    mode: 'no-cors'
-                }).then( (res) => {
-                    self.props.updateAnimation(res)
-                    console.info(res)
+                    })
                 });
+                fetch(request)
+                .then(function(response) {
+                    return response.json();
+                }).then(function(json) {
+                      self.props.updateAnimation(json)
+                      console.info(json)
+                }).catch(function(err) {
+                    console.log('Fetch Error :-S', err);
+                });
+                ;
 
                 // villeProxy.server.postImage(binary).done( msg => {
                 // alert(msg)// });

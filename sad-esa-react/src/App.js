@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Screen from './Screen';
 import './App.css';
 import Websocket from './websocket';
-import anger from './img/anger.png';
+// import anger from './img/anger.png';
 
 class App extends Component {
     constructor() {
@@ -16,8 +16,9 @@ class App extends Component {
     }
 
     updateAnimation(anim) {
+        console.info(anim)
         this.setState({animState: {
-          suggestion: 'spa_ad',
+          suggestion: anim.Message,
           animation: 'active',
         }})
     }
@@ -26,9 +27,7 @@ class App extends Component {
         return (
           <div>
             <Websocket updateAnimation={this.updateAnimation.bind(this)} />
-                <div className="animstate" style={{background: `url(${anger})`}}>
-                  {this.state.animation}
-                </div>
+
                 <Screen animState={this.state.animState} />
 
           </div>
